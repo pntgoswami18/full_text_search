@@ -11,7 +11,7 @@ def download_wikipedia_abstracts():
             for i, chunk in enumerate(r.iter_content(chunk_size=1024*1024)):
                 f.write(chunk)
                 if i % 10 == 0:
-                    print(f'Downloaded {i} megabytes')
+                    print(f'Downloaded {i} megabytes', end='\r')
 
                     
 if __name__ == '__main__':
